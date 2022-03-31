@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STXNEXT recruitment task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <p><strong>Click on 'View All Stock Names' to be displayed a list of all stock names. Enter a stock name into the textbox and click 'Load Stock Data' to view individual stock data.</strong></p>
+
+    <button type ="button" class ="button" id ="getStocks">
+        View All Stock Names
+    </button>
+
+    <input type="text" id="stockName" placeholder="Stock name">
+
+    <button type ="button" class ="button" id ="getData">
+        Load Stock Data
+    </button>
+
+    <div class="stocks" id="stockList"></div>
+
+    <table class = "styled-table" id="stockData">
+        <thead>
+            <th>Index</th>
+            <th>Value</th>
+            <th>Timestamp</th>
+        </thead>
+        <tbody class="tableData">
+            <td></td>
+        </tbody>
+
+    </table>
+
+
+    <div class="holder">
+        <span class="spinner" style = "display: none"></span>
+    </div>
+
+    <canvas id="chart" width="1000" height="600"></canvas>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
