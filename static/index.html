@@ -19,27 +19,30 @@
         Load Stock Data
     </button>
 
+    <span class="spinner" style = "display: none"></span>
+
     <div class="stocks" id="stockList"></div>
 
-    <table class = "styled-table" id="stockData">
-        <thead>
-            <th>Index</th>
-            <th>Value</th>
-            <th>Timestamp</th>
-        </thead>
-        <tbody class="tableData">
-            <td></td>
-        </tbody>
-
-    </table>
-
-
-    <div class="holder">
-        <span class="spinner" style = "display: none"></span>
+    <div class = "chartBox">
+        <canvas id="chart"></canvas>
+        <table class = "styled-table" id="stockData">
+            <thead>
+                <th>Index</th>
+                <th>Value</th>
+                <th>Timestamp</th>
+            </thead>
+            <tbody class="tableData">
+                <td></td>
+            </tbody>
+    
+        </table>
     </div>
 
-    <canvas id="chart" width="1000" height="600"></canvas>
+
+
+
 
     <script src="scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

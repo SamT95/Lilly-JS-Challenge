@@ -18,28 +18,10 @@ app.get('/stocks/:symbol', async (req, res) => {
     res.send(data)
     console.log(`Recent stock price for ${symbol}: `)
     console.table(data)
-  }catch (error) {
-    console.log(error) //Maybe encase whole process in fuction and recall?
+  } catch (error) {
+    console.log(error)
+    res.status(400).send(new Error('Error!'))
   }
 })
-
-
-/*
-app.get('/stocks/:symbol', async (req, res) => {
-  const getStockData = async function() {
-      try {
-        const { params: { symbol } } = req
-        const data = await stocks.getStockPoints(symbol, new Date())
-        res.send(data)
-        console.log(`Recent stock price for ${symbol}: `)
-        console.table(data)
-      }catch (error) {
-        console.log(error) //Maybe encase whole process in fuction and recall?
-        getStockData()
-      }
-  }
-})
-*/
-
 
 app.listen(3000, () => console.log('Server is running!'))
